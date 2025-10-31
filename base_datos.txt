@@ -1,0 +1,34 @@
+CREATE DATABASE bluecost;
+USE bluecost;
+
+-- Tabla de usuarios
+CREATE TABLE usuarios (
+    id INT AUTO_INCREMENT PRIMARY KEY,
+    nombre VARCHAR(100) NOT NULL,
+    correo VARCHAR(100) UNIQUE NOT NULL,
+    pass VARCHAR(255) NOT NULL,
+    fecha_registro TIMESTAMP DEFAULT CURRENT_TIMESTAMP
+);
+
+-- Tabla de publicaciones del foro
+CREATE TABLE foro_publicaciones (
+    id_publicacion INT AUTO_INCREMENT PRIMARY KEY,
+    id_user INT NOT NULL,
+    titulo VARCHAR(255) NOT NULL,
+    contenido TEXT NOT NULL,
+    imagen VARCHAR(255),
+    fecha_publicacion TIMESTAMP DEFAULT CURRENT_TIMESTAMP,
+    FOREIGN KEY (id_user) REFERENCES usuarios(id) ON DELETE CASCADE
+);
+
+-- Tabla de respuestas a publicaciones
+CREATE TABLE foro_respuestas (
+    id_respuesta INT AUTO_INCREMENT PRIMARY KEY,
+    id_publicacion INT NOT NULL,
+    id_user INT NOT NULL,
+    contenido TEXT NOT NULL,
+    imagen VARCHAR(255),
+    fecha_respuesta TIMESTAMP DEFAULT CURRENT_TIMESTAMP,
+    FOREIGN KEY (id_publicacion) REFERENCES foro_publicaciones(id_publicacion) ON DELETE CASCADE,
+    FOREIGN KEY (id_user) REFERENCES usuarios(id) ON DELETE CASCADE
+);

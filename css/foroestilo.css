@@ -1,0 +1,360 @@
+/* Estilos generales para el foro */
+.foroprinci {
+    font-family: sans-serif;
+    background-color: rgb(94, 115, 219);
+    margin: 0;
+    padding: 0;
+}
+
+.creapubli, .crearespuesta {
+    font-family: sans-serif;
+    background-color: #89e;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    margin: 0;
+    padding: 20px;
+}
+
+/* Header del foro */
+header {
+    background-image: url(/SRC/bgimage.gif);
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: 0px -150px;
+    background-color: transparent;
+    width: 100%;
+    height: 220px;
+    text-align: center;
+    border-bottom: 3px solid rgb(52, 65, 129);
+    padding-bottom: 25px;
+}
+
+.heder-conter {
+    width: 100%;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+.btn-regreso-conter {
+    width: 100%;
+    height: 40px;
+    display: flex;
+    align-items: center;
+    flex-direction: row-reverse;
+    margin-bottom: 20px;
+    margin-right: 32px;
+}
+
+.logoimg {
+    max-width: 400px;
+}
+
+/* Botones */
+.btn-regresar, .btn-crear, .btn-eliminar, .btn-responder, .btn-eliminar-respuesta {
+    display: inline-block;
+    padding: 8px 15px;
+    margin: 10px 5px;
+    border-radius: 10px;
+    text-decoration: none;
+    font-weight: bold;
+    text-transform: uppercase;
+    transition: all 0.3s ease;
+    border: 2px solid #fff;
+    cursor: pointer;
+    transition: 500ms;
+}
+
+.btn-regresar {
+    background-color: rgb(46, 46, 150);
+    color: white;
+    transition: 500ms;
+    margin-right: 15px;
+}
+
+.btn-crear {
+    background-color: rgb(46, 46, 150);
+    color: white;
+    margin: 15px;
+    transition: 500ms;
+}
+
+.btn-eliminar, .btn-eliminar-respuesta {
+    background-color: #d9534f;
+    color: white;
+    border: none;
+    font-size: 12px;
+    padding: 5px 10px;
+    transition: 500ms;
+}
+
+.btn-responder {
+    background-color: rgb(70, 70, 224);
+    color: white;
+    border: none;
+    padding: 8px 15px;
+    transition: 1000ms;
+}
+
+.btn-regresar:hover, .btn-crear:hover {
+    background-color: rgb(118, 137, 236);
+    transform: scale(1.05);
+    transition: 1000ms;
+}
+
+.btn-eliminar:hover, .btn-eliminar-respuesta:hover {
+    background-color: #c9302c;
+    transition: 500ms;
+}
+
+.btn-responder:hover {
+    background-color: rgb(108, 108, 242);
+    transition: 500ms;
+}
+
+/* Sección del foro */
+.seccionforodiv {
+    text-align: center;
+    padding: 30px 0px;
+    background-color: rgba(252, 252, 252, 0.2);
+    margin: 20px;
+    border-radius: 12px;
+    
+}
+
+.seccionforotitle {
+    color: rgb(46, 46, 150);
+    text-transform: uppercase;
+    font-size: 28px;
+    -webkit-text-stroke-width: 1px;
+    -webkit-text-stroke-color: rgb(155, 168, 231);
+}
+
+/* Contenedor de publicaciones */
+.publicaciones-container {
+    max-width: 1000px;
+    margin: 0 auto;
+    padding: 20px;
+}
+
+/* Estilo de cada publicación */
+.publicacion {
+    background-color: rgba(245, 245, 245, 0.8);
+    border-radius: 10px;
+    padding: 20px;
+    margin-bottom: 25px;
+    box-shadow: 0px 5px 15px rgba(0, 0, 0, 0.1);
+    border: 2px solid rgb(128, 175, 229);
+    display: flex;
+    flex-direction: column;
+}
+
+.contenido-publicacion h3 {
+    color: rgb(46, 46, 150);
+    margin-bottom: 10px;
+    text-transform: uppercase;
+}
+
+.contenido-publicacion p {
+    color: #333;
+    line-height: 1.6;
+    margin-bottom: 15px;
+}
+
+.imgforopubli, .imgfororespuesta {
+    max-width: 100%;
+    height: auto;
+    border-radius: 5px;
+    margin: 10px 0;
+    border: 1px solid #ddd;
+    border-radius: 12px;
+    margin-bottom: 20px;
+}
+
+.imgfororespuesta {
+    max-width: 30%;
+}
+
+.fecha, .autor {
+    color: #666;
+    font-size: 12px;
+}
+
+/* Contenedor de respuestas */
+.respuestas-container {
+    margin-top: 20px;
+    padding-top: 15px;
+    border-top: 2px solid rgb(94, 115, 219);
+}
+
+.respuestas-container h4 {
+    color: rgb(46, 46, 150);
+    margin-bottom: 10px;
+}
+
+.respuesta {
+    background-image: url(/SRC/fondoRespuestas.gif);
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: 0px -125px;
+    border-radius: 8px;
+    padding: 15px;
+    margin-bottom: 15px;
+    border-left: 3px solid rgb(70, 70, 224);
+    display: flex;
+    flex-direction: column;
+}
+
+.respuesta p {
+    margin-bottom: 10px;
+}
+
+/* Formularios */
+.form-container {
+    background-color: rgba(255, 255, 255, 0.9);
+    border-radius: 10px;
+    padding: 30px;
+    width: 90%;
+    max-width: 600px;
+    box-shadow: 0px 0px 20px rgba(0, 0, 0, 0.2);
+    border: 2px solid rgb(128, 175, 229);
+}
+
+.form-container h2 {
+    color: rgb(46, 46, 150);
+    text-align: center;
+    margin-bottom: 20px;
+    text-transform: uppercase;
+}
+
+.form-container label {
+    display: block;
+    margin-bottom: 5px;
+    color: rgb(46, 46, 150);
+    font-weight: bold;
+}
+
+.form-container input[type="text"],
+.form-container textarea {
+    width: 100%;
+    padding: 10px;
+    margin-bottom: 15px;
+    border: 2px solid rgb(128, 175, 229);
+    border-radius: 5px;
+    background-color: rgba(137, 238, 255, 0.2);
+    box-sizing: border-box;
+}
+
+.form-container button[type="submit"] {
+    width: 100%;
+    padding: 12px;
+    border-radius: 10px;
+    text-transform: uppercase;
+    font-weight: bold;
+    letter-spacing: 1px;
+    border: 2px solid rgb(128, 175, 229);
+    background-color: rgb(70, 70, 224);
+    transition: 1000ms;
+    color: white;
+    cursor: pointer;
+}
+
+.form-container button[type="submit"]:hover {
+    transform: scale(1.02);
+    transition: 500ms;
+    border-color: rgb(70, 70, 224);
+    background-color: rgb(108, 108, 242);
+    box-shadow: 0px 0px 15px rgba(95, 95, 255, 0.5);
+}
+
+/* Subida de archivos personalizada */
+.custom-file-upload {
+    margin-bottom: 15px;
+}
+
+.custom-file-upload input[type="file"] {
+    display: none;
+}
+
+.upload-button {
+    display: inline-block;
+    padding: 8px 15px;
+    background-color: rgb(77, 129, 189);
+    color: white;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s;
+}
+
+.upload-button:hover {
+    background-color: rgb(108, 155, 209);
+}
+
+/* Formulario de respuesta en línea */
+.form-respuesta {
+    margin-top: 15px;
+}
+
+.form-respuesta textarea {
+    width: 100%;
+    padding: 10px;
+    margin-bottom: 10px;
+    border: 2px solid rgb(128, 175, 229);
+    border-radius: 5px;
+    background-color: rgba(137, 238, 255, 0.2);
+    box-sizing: border-box;
+    resize: vertical;
+    min-height: 80px;
+}
+
+.login-required {
+    color: #666;
+    font-style: italic;
+    text-align: center;
+    margin-top: 10px;
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+    .publicaciones-container {
+        padding: 10px;
+    }
+    
+    .publicacion {
+        padding: 15px;
+    }
+    
+    .form-container {
+        padding: 20px;
+    }
+    
+    .btn-regresar {
+        position: static;
+        margin: 10px;
+    }
+}
+
+nav {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.abx {
+    color: #000;
+    font-weight: bold;
+}
+
+.btn-regresar-comentario {
+    margin: 10px 0px 25px 0px;
+}
+
+.form-crear-publicacion {
+    background-image: url(../SRC/zbgou9hshzx91.gif);
+    background-repeat: no-repeat;
+    background-size: cover;
+}
